@@ -16,7 +16,7 @@ from functools import wraps
 
 # Initialize Firebase (assuming you have a serviceAccountKey.json file)
 try:
-    cred = credentials.Certificate("myapp/service_key/service_key.json")
+    cred = credentials.Certificate('/etc/secrets/service_key.json')
     firebase_admin.initialize_app(cred)
     db = firestore.client()
     FIREBASE_INITIALIZED = True
